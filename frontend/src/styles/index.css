@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html, body, #root { min-height: 100%; }
+body {
+  @apply bg-ink text-slate-100 antialiased font-sans;
+  background-image: radial-gradient(60rem 28rem at 50% -8%, rgba(99,102,241,.25), transparent 60%),
+    radial-gradient(36rem 22rem at 105% 25%, rgba(34,211,238,.09), transparent 60%);
+  background-attachment: fixed;
+  -webkit-tap-highlight-color: transparent;
+}
+*:focus-visible { outline: 2px solid #22d3ee; outline-offset: 3px; }
+@layer components {
+  .card { @apply rounded-3xl border border-white/10 bg-white/[0.04] shadow-card backdrop-blur-md; }
+  .btn { @apply inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl px-5 text-base font-semibold transition active:scale-[.98] disabled:opacity-50; }
+  .btn-primary { @apply btn bg-gradient-to-r from-indigo-500 to-cyan-400 text-ink shadow-glow; }
+  .btn-ghost { @apply btn border border-white/10 bg-white/5 text-slate-100 hover:bg-white/10; }
+  .label { @apply text-xs font-semibold uppercase tracking-[0.18em] text-slate-400; }
+}
+@keyframes pop { 0% { transform: scale(.97); opacity: .6 } 100% { transform: scale(1); opacity: 1 } }
+.pop { animation: pop .18s ease-out; }
+@media (prefers-reduced-motion: reduce) { .pop { animation: none; } * { transition: none !important; } }

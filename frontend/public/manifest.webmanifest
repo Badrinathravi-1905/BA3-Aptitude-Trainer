@@ -1,0 +1,11 @@
+{
+  "name": "BA3 Aptitude Trainer", "short_name": "BA3 Trainer",
+  "description": "Build speed. Build accuracy. Build recall.",
+  "start_url": "/", "scope": "/", "display": "standalone", "orientation": "portrait",
+  "background_color": "#070A13", "theme_color": "#070A13",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
